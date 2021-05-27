@@ -1,0 +1,62 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+class figure
+{
+protected:
+	double x, y, z;
+public:
+	figure(double a = 0, double b = 0, double h = 0) { 
+		x = a; 
+		y = b; 
+		z = h; 
+	}
+	virtual double area() { 
+		return 0; 
+	} 
+};
+class rectangle : public figure
+{
+public:
+	rectangle(double a = 0, double b = 0) : figure(a, b, 0) {
+	};
+	double area() { 
+		return x * y; 
+	}
+	double perimeter() { 
+		return 2 * x + 2 * x; 
+	}
+};
+class circle : public figure
+{
+public:
+	circle(double a = 0) : figure(a, 0, 0) {
+	};
+	double area() { 
+		return 3.14*x*x; 
+	}
+};
+class triangle : public figure
+{
+public:
+	triangle(double a = 0, double b = 0, double h = 0) : figure(a, b, h) {};
+	double area() { 
+		return 0.5 * x * z; 
+	}
+	double perimeter() { 
+		return (sqrt(y * y - h * h) + 2 * y); 
+	}
+};
+int main() {
+	figure f[3];
+	rectangle rect(3, 4);
+	circle cir(2);
+	triangle tr(2, 3, 4);
+	f[0] = &rect;
+	f[1] = &cir;
+	f[2] = &tr;
+	//cout << f[0]->area() << endl; 
+	cout << f[0].area() << endl;
+	cout << f[1].area() << endl;
+	cout << f[2].area() << endl;
+}
