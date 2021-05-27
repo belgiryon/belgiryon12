@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main(int argc,char*argv[])
+{
+    ifstream ifs("file1.txt");
+    ofstream ofs("file2.txt");
+    
+    if(!ifs.is_open())
+    {
+        int n,t;
+        ifs>>n;
+        int sum=0;
+        for (int i = 0; i < n; i++)
+        {
+            ifs>>t;
+            sum+=t;
+        }
+        ifs.close();
+        cout<<sum<<endl;
+    
+    }else
+    cout<<"Файл file1.txt не открылся";
+}
+    
+    
