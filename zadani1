@@ -1,0 +1,47 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    
+    setlocale(0, "");
+    double x;
+    cout << "Введите x: ";
+    cin >> x;
+    double f;
+    double y;
+
+    if (x > 0) {
+        int var;
+        cout << "Выберите функцию f(x): 1. x^2, 2. e^x, 3. sin(x). ";
+        cin >> var;
+
+        if (var == 1) {
+            f = pow(pow(x, 2), 4);
+        }
+        else if (var == 2) {
+            f = pow(exp(x), 4);
+        }
+        else {
+            f = sin(pow(x, 4));
+        }
+
+        y = f * log(2 * x + 1);
+
+    } else {
+        y = tan(pow(x, 2) + 3);
+    }
+
+    cout << "y = " << y << endl;
+
+    cout << sizeof(char) << ' ' << sizeof(long*) << ' ' << sizeof(long long );
+
+    int i = 0, j = -1, k = -1;
+    if (++i && ++j || ++k) 
+        cout << i << ' ' << j << ' ' << k;
+    else 
+        cout << -i << ' ' << -j << ' ' << -k;
+
+    return 0;
+}
