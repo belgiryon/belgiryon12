@@ -1,0 +1,77 @@
+package com.company;
+import java.io.PrintStream;
+import java.util.Locale;
+import static java.lang.Math.sqrt;
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter x: -1000 to 1000 ");
+        float x = sc.nextFloat();
+        sc.close();
+        if (x < 0) {
+            if (x % 2 != 0) {
+                if ((x < -99) & (x > -1000)) {
+                    System.out.println("Отрицательное нечетное четырехзначное число:" + x);
+                } else if ((x < -9) & (x > -100)) {
+                    System.out.println(" Отрицательное нечетное двузначное число:" + x);
+                } else if ((x < 0) & (x > -10)) {
+                    System.out.println("Отрицательное нечетное однозначное число:" + x);
+                }
+            } else if (x % 2 == 0) {
+                if ((x < -99) & (x > -1000)) {
+                    System.out.println("трицательное четное трехзначное число:" + x);
+                } else if ((x < -9) & (x > -100)) {
+                    System.out.println("Отрицательное четное двузначное число:" + x);
+                } else if ((x < 0) & (x > -10)) {
+                    System.out.println("Отрицательное четное однозначное число:"+ x);
+                }
+            }
+        }
+        else if (x > 0)
+        {
+            if (x%2!=0)
+            {
+                if ((x>99) & (x<1000))
+                {
+                    System.out.println("Положительное нечетное трехзначное число:"+x);
+                }
+                else if ((x>9) & (x<100))
+                {
+                    System.out.println("Положительное нечетное двузначное число:"+x);
+                }
+                else if ((x>0) & (x<10))
+                {
+                    System.out.println("Положительное нечетное однозначное число:"+x);
+                }
+            }
+            else if (x % 2 == 0)
+            {
+                if ((x>99) & (x<1000))
+                {
+                    System.out.println("Положительное четное трехзначное число:"+x);
+                }
+                else if ((x >9) & (x < 100))
+                {
+                    System.out.println("Положительное четное двузначное число:"+x);
+                }
+                else if ((x>0) & (x<10))
+                {
+                    System.out.println("Положительное четное однозначное число:"+x);
+                }
+            }
+        }
+        if (x==0)
+        {
+            System.out.println("нулевое число:");
+        }
+
+    }
+}
+
+
+
