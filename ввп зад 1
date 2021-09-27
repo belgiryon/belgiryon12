@@ -1,0 +1,43 @@
+package com.company;
+import java.io.PrintStream;
+import java.util.Locale;
+import static java.lang.Math.sqrt;
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a: ");
+        float a=sc.nextFloat();
+
+        System.out.println("Enter b:");
+        float b=sc.nextFloat();
+
+        System.out.println("Enter c:");
+        float c=sc.nextFloat();
+
+        sc.close();
+
+        if (a<=0.00 || b<=0.00 || c<=0.00)
+        {
+            System.out.println("Wrong Condition One of the sides is equal to or less than 0. \n");
+        }
+        else if((a+b)-c<=0.00 || (a + c) - b <= 0.00 || (b + c) - a <= 0) {
+            System.out.println("The sum of the two sides is equal to or less than the third side \n");
+        }
+        else
+        {
+            float p= (a+b+c)/2;
+            float ha = (float) (2* sqrt(p*(p-a)*(p-b)*(p-c))/a);
+            float hb = (float) (2* sqrt(p*(p-a)*(p-b)*(p-c))/b);
+            float hc = (float) (2* sqrt(p*(p-a)*(p-b)*(p-c))/c);
+            System.out.println(ha);
+            System.out.println(hb);
+            System.out.println(hc);
+        }
+    }
+
+}
