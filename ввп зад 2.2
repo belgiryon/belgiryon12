@@ -1,31 +1,41 @@
 package com.company;
-import java.io.PrintStream;
-import java.util.Locale;
-import static java.lang.Math.sqrt;
 
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter x:");
+        System.out.println("Enter x -1000 to 1000:");
         int x = sc.nextInt();
         sc.close();
         System.out.print("Число " + x + ": ");
-        if (x == 0) {
-            System.out.print("нулевое");
-        }
-        else {
-            if (x > 0) {
-            System.out.print("Положительное");
-        } else {
-            System.out.print("Отрицательное");
-        }
-        if (x % 2 != 0) {
-            System.out.print(" четное");
-        } else {
-            System.out.print(" нечетное");
+
+            if (x == 0) {
+                System.out.print("нулевое");
+            }
+            else {
+                if (x > 0)
+                System.out.print("Положительное");
+            else {
+                System.out.print("Отрицательное");
+            }
+            if (x % 2 != 0) {
+                System.out.print(" четное ");
+            } else {
+                System.out.print(" нечетное ");
+            }
+            if ((x > 0 && x < 10) || (x < 0 && x > -10)) {
+                System.out.print("однозначное");
+            }
+            else if ((x > 10 && x < 100) || (x < -10 && x > -100)){
+                System.out.print("двухзначное");
+            }
+            else  if ((x > 100 && x < 1000) || (x < -100 && x > -1000)){
+                System.out.print("трёхзначное");
+            }
+            else
+                System.out.print("\n Ошибка Введите только -1000 to 1000");
         }
     }
-  }
 }
