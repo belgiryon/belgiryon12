@@ -5,19 +5,17 @@ import static java.lang.Math.sqrt;
 
 import java.util.Scanner;
 public class Main {
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter x:");
+        System.out.print("Enter x:");
         float x = sc.nextFloat();
         sc.close();
-
+        System.out.print("Число " + x + ": ");
         if (x == 0) {
             System.out.print("нулевое");
         }
-        else
+        else {
             if (x > 0) {
             System.out.print("Положительное");
         } else {
@@ -29,4 +27,5 @@ public class Main {
             System.out.print(" нечетное");
         }
     }
+  }
 }
