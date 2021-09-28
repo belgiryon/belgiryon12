@@ -15,18 +15,18 @@ public class Main {
         sc.close();
 
         if (x == 0) {
-            System.out.println("нулевое:");
+            System.out.print("нулевое");
         }
-        if (x > 0) {
-            System.out.println("Положительное:"+x);
+        else
+            if (x > 0) {
+            System.out.print("Положительное");
         } else {
-            System.out.println("Отрицательное:"+x);
+            System.out.print("Отрицательное");
         }
         if (x % 2 != 0) {
-            System.out.println("четное:"+x);
+            System.out.print(" четное");
         } else {
-            System.out.println("нечетное:"+x);
+            System.out.print(" нечетное");
         }
-
     }
 }
