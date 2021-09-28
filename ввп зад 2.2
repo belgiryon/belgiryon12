@@ -1,0 +1,32 @@
+package com.company;
+import java.io.PrintStream;
+import java.util.Locale;
+import static java.lang.Math.sqrt;
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter x:");
+        float x = sc.nextFloat();
+        sc.close();
+
+        if (x == 0) {
+            System.out.println("нулевое число:");
+        }
+        if (x > 0) {
+            System.out.println("Положительное  число" + x);
+        } else {
+            System.out.println("Отрицательное  число" + x);
+        }
+        if (x % 2 != 0) {
+            System.out.println(" четное  число:" + x);
+        } else {
+            System.out.println(" нечетное число:" + x);
+        }
+
+    }
+}
