@@ -1,16 +1,21 @@
 package com.company;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import static com.company.MySingleLinkedList.*;
 
 public class Main {
 
     public static void main(String[] args) {
-    MyDate date1= new MyDate(28,9,2021);
-    MyDate date2= new MyDate(6,3,1994);
-
-    System.out.println("Date1: "+ date1.getMonth()+"."+date1.getDay() + "." +date1.getYear());
-    System.out.println("Date2: "+date2.getMonth()+"."+date2.getDay()+"."+date2.getYear());
-
+        push( 15);
+        push( -14);
+        push( 13);
+        push( -22);
+        push( 17);
+        System.out.println("Linked list is : ") ;
+        printList(head);
+        System.out.print("Maximum element in linked list: ");
+        System.out.println(largestElement(head));
+        System.out.print("Minimum element in linked list: ");
+        System.out.print(smallestElement(head));
     }
 }
+
